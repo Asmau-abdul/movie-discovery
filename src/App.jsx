@@ -11,14 +11,16 @@ function App() {
 
   return (
     <BrowserRouter>
-      <Navbar/>
+      <div className='bg-gray-950 text-gray-100 min-h-screen'>
+        <Navbar/>
 
-      <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/search' element={<Search/>}/>
-        <Route path='/movie/:id' element={<MovieDetail/>}/>
-        <Route path='/favourites' element={<Favourites/>}/>
-      </Routes>
+        <Routes>
+          <Route path='/' element={<Home/>}/>
+          <Route path='/search' element={<Search/>}/>
+          <Route path='/movie/:id' element={<MovieDetail/>}/>
+          <Route path='/favourites' element={<Favourites/>}/>
+        </Routes>
+      </div>
     </BrowserRouter>
   )
 }
