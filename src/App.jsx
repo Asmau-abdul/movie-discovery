@@ -9,10 +9,12 @@ import Favourites from './pages/Favourites'
 
 function App() {
 
+  const [page, setPage] = useState('home')
+
   return (
     <BrowserRouter>
       <div className='bg-gray-950 text-gray-100 min-h-screen'>
-        <Navbar/>
+        <Navbar onPage={setPage} currentPage={page}/>
 
         <Routes>
           <Route path='/' element={<Home/>}/>

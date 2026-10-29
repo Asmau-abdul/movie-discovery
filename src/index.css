@@ -1,1 +1,8 @@
 @import "tailwindcss";
+
+.page{
+    border-bottom: 2px solid #7D75D9;
+    padding-bottom: 4px;
+    color: white;
+    transition: all ease-in-out 0.3s;
+}
