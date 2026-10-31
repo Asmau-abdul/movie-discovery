@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './index.css'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
@@ -9,19 +8,19 @@ import Favourites from './pages/Favourites'
 
 function App() {
 
-  const [page, setPage] = useState('home')
-
   return (
     <BrowserRouter>
       <div className='bg-gray-950 text-gray-100 min-h-screen'>
-        <Navbar onPage={setPage} currentPage={page}/>
+        <Navbar />
 
-        <Routes>
-          <Route path='/' element={<Home/>}/>
-          <Route path='/search' element={<Search/>}/>
-          <Route path='/movie/:id' element={<MovieDetail/>}/>
-          <Route path='/favourites' element={<Favourites/>}/>
-        </Routes>
+        <main className='max-w-6xl mx-auto px-6 py-8'>
+          <Routes>
+            <Route path='/' element={<Home/>}/>
+            <Route path='/search' element={<Search/>}/>
+            <Route path='/movie/:id' element={<MovieDetail/>}/>
+            <Route path='/favourites' element={<Favourites/>}/>
+          </Routes>
+        </main>
       </div>
     </BrowserRouter>
   )

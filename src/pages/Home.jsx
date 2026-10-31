@@ -20,7 +20,7 @@ const Home = () => {
     if (error) return <p>{error}</p>
 
   return (
-    <div className='p-6'>
+    <div>
         <h1 className='text-2xl font-bold mb-4'>Popular movies</h1>
         <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-4'>
             {movies.map(movie => (
